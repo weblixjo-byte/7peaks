@@ -76,15 +76,15 @@
         <form>
           <div class="form-group">
             <label>Full Name</label>
-            <input type="text" class="form-control" required>
+            <input type="text" class="form-control" name="full_name" required>
           </div>
           <div class="form-group">
             <label>Email Address</label>
-            <input type="email" class="form-control" required>
+            <input type="email" class="form-control" name="email" required>
           </div>
           <div class="form-group">
             <label>Target Role</label>
-            <select class="form-control">
+            <select class="form-control" name="role">
               <option>Security Consultant</option>
               <option>Penetration Tester</option>
               <option>Project Manager (PMP)</option>
@@ -95,7 +95,7 @@
           </div>
           <div class="form-group">
             <label>Cover Letter Summary / Background</label>
-            <textarea class="form-control" required></textarea>
+            <textarea class="form-control" name="cover_letter" required></textarea>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Application</button>
         </form>
