@@ -137,9 +137,17 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       formData.append('subject', subject);
 
+      // Convert FormData to JSON (required by Web3Forms AJAX/Fetch submissions)
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
       fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: json
       })
       .then(response => response.json())
       .then(data => {
